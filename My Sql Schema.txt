@@ -1,0 +1,66 @@
+`admin`Table
+
+CREATE TABLE `admin` (
+  `name` varchar(255) NOT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+`cart` Table
+
+CREATE TABLE `cart` (
+  `ID` int NOT NULL,
+  `BOOKED` varchar(255) DEFAULT NULL,
+  `LOGINS_ID` int DEFAULT NULL,
+  `PRODUCTS_ID` int DEFAULT NULL,
+  `PNAME` varchar(255) DEFAULT NULL,
+  `PRICE` int DEFAULT NULL,
+  `PTYPE` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+`cart_id_seq` Table
+
+CREATE TABLE `cart_id_seq` (
+  `next_val` bigint DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+login_id_seq` Table
+
+CREATE TABLE `login_id_seq` (
+  `next_val` bigint DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+`medical_products` Table
+
+CREATE TABLE `medical_products` (
+  `pid` int NOT NULL,
+  `pname` varchar(255) DEFAULT NULL,
+  `pqty` int DEFAULT NULL,
+  `price` int DEFAULT NULL,
+  `ptype` varchar(255) DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`pid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+`product_id_seq` Table
+
+CREATE TABLE `product_id_seq` (
+  `next_val` bigint DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+`registrations` Table
+
+CREATE TABLE `registrations` (
+  `id` int NOT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
